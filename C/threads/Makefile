@@ -37,11 +37,11 @@ vector_system_row: vector_system_row.o
 	$(CC) $(CFLAGS) -lpthread -o $@ $@.o
 
 test1:
-	$(foreach obj, $(OBJS), echo 'Comienza test $(obj) 800 900 3000' ; (time ../bin/$(obj) 800 900 3000) >> threads1.log 2>&1; echo 'Fin test';)
+	$(foreach obj, $(OBJS), echo 'Starting test $(obj) 800 900 3000' ; (time ../bin/$(obj) 800 900 3000) >> threads1.log 2>&1; echo 'done.';)
 test2:
-	$(foreach obj, $(OBJS), echo 'Comienza test $(obj) 8000 90 8000' ; (time ../bin/$(obj) 8000 90 8000) >> threads2.log 2>&1; echo 'Fin test';)
+	$(foreach obj, $(OBJS), echo 'Starting test $(obj) 8000 90 8000' ; (time ../bin/$(obj) 8000 90 8000) >> threads2.log 2>&1; echo 'done.';)
 test3:
-	$(foreach obj, $(OBJS), echo 'Comienza test $(obj) 8000 10 80000' ; (time ../bin/$(obj) 8000 10 80000) >> threads3.log 2>&1; echo 'Fin test';)
+	$(foreach obj, $(OBJS), echo 'Starting test $(obj) 8000 10 80000' ; (time ../bin/$(obj) 8000 10 80000) >> threads3.log 2>&1; echo 'done.';)
 
 tests:
 	make test1 && make test2 && make test3

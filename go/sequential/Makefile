@@ -29,27 +29,27 @@ GCCGOFLAGS=-O2
 all: $(OBJS)
 
 sequential_vector:
-	6g $@.go
+	6g -B $@.go
 	6l -o $@ $@.6
 
 sequential_vector_inter:
-	6g $@.go
+	6g -B $@.go
 	6l -o $@ $@.6
 
 sequential_vector_noacum:
-	6g $@.go
+	6g -B $@.go
 	6l -o $@ $@.6
 
 sequential_matrix:
-	6g $@.go
+	6g -B $@.go
 	6l -o $@ $@.6
 
 sequential_matrix_inter:
-	6g $@.go
+	6g -B $@.go
 	6l -o $@ $@.6
 
 sequential_matrix_noacum:
-	6g $@.go
+	6g -B $@.go
 	6l -o $@ $@.6
 
 sequential_vector-gccgo:

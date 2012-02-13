@@ -27,7 +27,7 @@ func main () {
 	flag.Parse()
 
 	if (flag.NArg() > 2) {
-		fmt.Printf("\nsecuencial_vector_noacum %s %s %s\n", flag.Arg(0), flag.Arg(1), flag.Arg(2))
+		fmt.Printf("\nsequencial_vector_inter %s %s %s\n", flag.Arg(0), flag.Arg(1), flag.Arg(2))
 
 		matrix1_fils,_ := strconv.Atoi(flag.Arg(0))
 		matrix1_cols,_ := strconv.Atoi(flag.Arg(1))
@@ -42,11 +42,15 @@ func main () {
 		init_matrix(&matrix2, matrix2_fils, matrix2_cols)
 
 		// Bucle principal
+		var acum int
+
 		for i := 0; i < matrix1_fils; i++ {
 			for j := 0; j < matrix2_cols; j++ {
+				acum = 0
 				for k := 0; k < matrix1_cols; k++ {
-					matrixR[i * matrix2_cols + j] += matrix1[i * matrix1_cols + k] * matrix2[k * matrix2_cols + j]
+					acum += matrix1[i * matrix1_cols + k] * matrix2[k * matrix2_cols + j]
 				}
+				matrixR[i * matrix2_cols + j] = acum
 			}
 		}
 

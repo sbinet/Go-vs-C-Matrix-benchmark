@@ -1,6 +1,6 @@
 # Makefile
 
-DIRS=parallel secuential
+DIRS=parallel sequential
 
 all:
 	$(foreach dirs, $(DIRS), cd $(dirs); make ; cd ..;)

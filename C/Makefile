@@ -1,6 +1,6 @@
 # Makefile
 
-DIRS=secuential threads
+DIRS=sequential threads
 
 all:
 	$(foreach dirs, $(DIRS), cd $(dirs); make ; cd ..;)

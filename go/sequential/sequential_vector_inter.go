@@ -27,7 +27,7 @@ func main () {
 	flag.Parse()
 
 	if (flag.NArg() > 2) {
-		fmt.Printf("\nsecuencial_vector_inter %s %s %s\n", flag.Arg(0), flag.Arg(1), flag.Arg(2))
+		fmt.Printf("\nsequencial_vector_inter %s %s %s\n", flag.Arg(0), flag.Arg(1), flag.Arg(2))
 
 		matrix1_fils,_ := strconv.Atoi(flag.Arg(0))
 		matrix1_cols,_ := strconv.Atoi(flag.Arg(1))
